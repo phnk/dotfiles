@@ -121,3 +121,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# ros setup
+source /opt/ros/melodic/setup.zsh
+

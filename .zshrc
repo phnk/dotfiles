@@ -124,3 +124,5 @@ unset __conda_setup
 # ros setup
 source /opt/ros/melodic/setup.zsh
 
+# aliases
+alias vim="nvim"

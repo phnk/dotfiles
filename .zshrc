@@ -126,3 +126,4 @@ source /opt/ros/melodic/setup.zsh
 
 # aliases
 alias vim="nvim"
+alias xclip="xclip -selection c"

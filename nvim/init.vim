@@ -31,7 +31,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 	Plug 'scrooloose/nerdtree'
 	Plug 'vim-airline/vim-airline'
-
+	Plug 'tpope/vim-surround'
 call plug#end()
 
 " Run PlugInstall if there are missing plugins
@@ -42,4 +42,4 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 " Bindings
 
 " Autocmd
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree

@@ -1,7 +1,9 @@
+:lua require("ph")
+
 " Generic settings
 set nocompatible
 set number relativenumber
-syntax on
+syntax off
 set encoding=utf-8
 set ruler
 set breakindent
@@ -21,25 +23,47 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set path+=**
 set wildmenu
 
+set expandtab
+set timeoutlen=1000 ttimeoutlen=0
+
+set incsearch
+set hlsearch
+set termguicolors
+set updatetime=50
+"set colorcolumn=80
+
+set scrolloff=8
+
+let mapleader=" "
+
 " Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob('${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
-
-" plugins
-call plug#begin('~/.config/nvim/plugged')
-	Plug 'scrooloose/nerdtree'
-	Plug 'vim-airline/vim-airline'
-	Plug 'tpope/vim-surround'
-call plug#end()
 
 " Run PlugInstall if there are missing plugins
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-" Bindings
+call plug#begin()
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+Plug 'rose-pine/neovim', { 'as':'rose-pine' }
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'mbbill/undotree'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v4.x'}
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+call plug#end()
 
-" Autocmd
-" autocmd VimEnter * NERDTree
+" Load plugin settings
+" Colorscheme:
+:lua vim.cmd.colorscheme("rose-pine")
+:lua vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+:lua vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+

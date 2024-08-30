@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/carbor/.oh-my-zsh"
+export PATH="$PATH:/usr/local/go/bin"
 export PATH="/opt/Xilinx/Vivado/2020.2/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will

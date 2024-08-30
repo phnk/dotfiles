@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "pyright", "marksman", "clangd"}
+    ensure_installed = { "pyright", "marksman", "clangd", "gopls"}
 }
 
 local lsp_zero = require('lsp-zero')
@@ -29,6 +29,7 @@ lsp_zero.extend_lspconfig({
 require("lspconfig").pyright.setup {}
 require("lspconfig").clangd.setup {}
 require("lspconfig").marksman.setup {}
+require("lspconfig").gopls.setup {}
 
 local cmp = require('cmp')
 

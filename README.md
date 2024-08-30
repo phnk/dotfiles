@@ -11,6 +11,7 @@ My personal dotfiles so I don't have suffer too much when changing system.
 7. [npm](https://github.com/npm/cli)
 8. [miniconda](https://github.com/conda/conda)
 9. [git](https://github.com/git/git)
+10. [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## Installation:
 1. `cd ~`
@@ -29,4 +30,6 @@ My personal dotfiles so I don't have suffer too much when changing system.
 ## TODO:
 * automatic linking
 * automatic installation of nvim and other stuff
+
+
 

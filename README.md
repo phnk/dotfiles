@@ -20,8 +20,7 @@ My personal dotfiles so I don't have suffer too much when changing system.
     ln -s dotfiles/.vimrc .vimrc
     ln -s dotfiles/.zshrc .zshrc
     ln -s dotfiles/.zshrc-oh-my-zsh .zshrc-oh-my-zsh
-    ln -s dotfiles/nvim .config/nvim
-```
+    ln -s dotfiles/nvim .config/nvim```
 4. Update the username in `.zshrc` and `.zshrc-oh-my-zsh`
 5. Restart the shell
 6. Open nvim to install all the plugins

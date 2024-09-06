@@ -15,6 +15,14 @@ filetype plugin on
 filetype indent on
 set showbreak=..
 
+" save me from the mouse
+set mouse=
+set mousescroll=ver:0,hor:0
+:lua vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+:lua vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+:lua vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+:lua vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
+
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -34,7 +42,9 @@ set updatetime=50
 
 set scrolloff=8
 
+" there are a million mapleaders for some reason
 let mapleader=" "
+let maplocalleader = " "
 
 " Install vim-plug if not found
 if empty(glob('${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim'))
@@ -59,6 +69,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v4.x'}
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'lervag/vimtex'
 call plug#end()
 
 " Load plugin settings
@@ -66,4 +78,5 @@ call plug#end()
 :lua vim.cmd.colorscheme("rose-pine")
 :lua vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 :lua vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+let g:mkdp_theme = 'dark'
 

@@ -12,6 +12,7 @@ My personal dotfiles so I don't have suffer too much when changing system.
 8. [miniconda](https://github.com/conda/conda)
 9. [git](https://github.com/git/git)
 10. [ripgrep](https://github.com/BurntSushi/ripgrep)
+11. [xclip](https://github.com/astrand/xclip)
 
 ## Installation:
 1. `cd ~`

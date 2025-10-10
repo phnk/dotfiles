@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "pyright", "marksman", "clangd", "gopls"}
+    ensure_installed = { "pyright", "marksman", "clangd", "gopls", "texlab"}
 }
 
 local lsp_zero = require('lsp-zero')
@@ -30,6 +30,7 @@ require("lspconfig").pyright.setup {}
 require("lspconfig").clangd.setup {}
 require("lspconfig").marksman.setup {}
 require("lspconfig").gopls.setup {}
+require("lspconfig").texlab.setup {}
 
 local cmp = require('cmp')
 

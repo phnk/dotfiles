@@ -80,3 +80,5 @@ call plug#end()
 :lua vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 let g:mkdp_theme = 'dark'
 
+" Indentation in python
+let g:pyindent_open_paren = 'shiftwidth()'

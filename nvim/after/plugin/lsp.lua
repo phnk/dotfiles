@@ -27,10 +27,18 @@ lsp_zero.extend_lspconfig({
 })
 
 require("lspconfig").pyright.setup {}
-require("lspconfig").clangd.setup {}
 require("lspconfig").marksman.setup {}
 require("lspconfig").gopls.setup {}
 require("lspconfig").texlab.setup {}
+require('lspconfig').clangd.setup {
+    cmd = {
+        "clangd",
+        "--query-driver=/usr/bin/g++",
+    },
+    init_options = {
+        fallbackFlags = { '--std=c++23' }
+    },
+}
 
 local cmp = require('cmp')
 

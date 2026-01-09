@@ -26,11 +26,11 @@ lsp_zero.extend_lspconfig({
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
-require("lspconfig").pyright.setup {}
-require("lspconfig").marksman.setup {}
-require("lspconfig").gopls.setup {}
-require("lspconfig").texlab.setup {}
-require('lspconfig').clangd.setup {
+vim.lsp.config("pyright", {})
+vim.lsp.config("marksman", {})
+vim.lsp.config("gopls", {})
+vim.lsp.config("texlab", {})
+vim.lsp.config("clangd", {
     cmd = {
         "clangd",
         "--query-driver=/usr/bin/g++",
@@ -38,7 +38,7 @@ require('lspconfig').clangd.setup {
     init_options = {
         fallbackFlags = { '--std=c++23' }
     },
-}
+})
 
 local cmp = require('cmp')
 

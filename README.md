@@ -13,6 +13,7 @@ My personal dotfiles so I don't have suffer too much when changing system.
 9. [git](https://github.com/git/git)
 10. [ripgrep](https://github.com/BurntSushi/ripgrep)
 11. [xclip](https://github.com/astrand/xclip)
+11. [kitty](https://github.com/kovidgoyal/kitty)
 
 ## Installation:
 1. `cd ~`
@@ -23,6 +24,7 @@ My personal dotfiles so I don't have suffer too much when changing system.
     ln -s dotfiles/.zshrc .zshrc
     ln -s dotfiles/.zshrc-oh-my-zsh .zshrc-oh-my-zsh
     ln -s ~/dotfiles/nvim ~/.config/nvim
+    ln -s ~/dotfiles/kitty ~/.config/kitty
 4. Update the username in `.zshrc` and `.zshrc-oh-my-zsh`
 5. Restart the shell
 6. Open nvim to install all the plugins
@@ -31,6 +33,3 @@ My personal dotfiles so I don't have suffer too much when changing system.
 ## TODO:
 * automatic linking
 * automatic installation of nvim and other stuff
-
-
-

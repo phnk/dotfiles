@@ -1,16 +1,14 @@
 include current-theme.conf
 background_opacity 0.9
 
-# BEGIN_KITTY_FONTS
-font_family      family="CaskaydiaCove Nerd Font Mono"
-bold_font        auto
+font_family      JetBrainsMono Nerd Font
 italic_font      auto
+bold_font        auto
 bold_italic_font auto
-# END_KITTY_FONTS
 
 font_size        20.0
 
-#adjust_baseline -5
+adjust_baseline -5
 
 shell_integration no-cursor
 cursor_shape block
@@ -37,5 +35,3 @@ open_url_with default
 term xterm-kitty
 
 window_margin_width 3
-
-
